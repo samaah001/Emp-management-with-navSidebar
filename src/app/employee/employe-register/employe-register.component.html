@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">Employe Registration</div>
+    <div class="card-body">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="uname">EmployeName:</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeObj.employeName" name="employeName"
+                        placeholder="Enter Name *">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="uname">EmployeCity:</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeObj.employeCity" name="employeCity"
+                        placeholder="Enter City">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="uname">Select State:</label>
+                    <select class="form-control" [(ngModel)]="employeObj.employeState" name="employeState">
+                        <select>Select State</select>
+                        <option value="Mah">Maharashtra</option>
+                        <option value="Del">Delhi</option>
+                        <option value="jk">Jammu And Kashmir</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-">
+                    <label for="uname">Mobile:</label>
+                    <input type="text" class="form-control" [(ngModel)]="employeObj.employeMobile" name="employeMobile"
+                        placeholder="Enter Mobile No.">
+                </div>
+            </div>
+            <button type="button" *ngIf="employeObj.employeName" (click)="saveEmp()" class="btn btn-primary">Save
+                Employe</button>
+        </form>
+    </div>
+</div>
